@@ -12,8 +12,6 @@ def check_robots_txt(domain):
         
         # Handle different HTTP responses
         if response.status_code == 200:
-            print("✅ robots.txt file exists!")
-            
             # Step 2: Check if "User-agent: *" is present in the file
             robots_content = response.text
             if "User-agent: *" in robots_content:
@@ -30,5 +28,5 @@ def check_robots_txt(domain):
         print(f"❌ Failed to fetch robots.txt due to error: {e}")
 
 # Replace with the domain you want to check
-domain = "https://www.universepg.com/"  
+domain = "https://pawshug.com/"
 check_robots_txt(domain)
